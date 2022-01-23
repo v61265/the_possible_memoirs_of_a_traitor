@@ -1,0 +1,19 @@
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  // 手機版
+  sm: 576px,
+  // 平板
+  md: 768px,
+  // 筆電
+  xl: 1200px,
+  // 桌電
+) !default;
+
+:export {
+  @each $key, $value in $grid-breakpoints {
+    breakpoint-#{$key}: $value;
+  }
+}
