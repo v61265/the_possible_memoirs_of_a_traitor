@@ -25,11 +25,24 @@ export default {
   font-family: Racing Sans One;
   text-align: center;
   @media (min-width: 768px) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
     padding: 50px 70px;
+    text-align: start;
+    font-size: 36px;
+    line-height: 45px;
   }
   &__time {
     font-size: 64px;
     line-height: 81px;
+    @media (min-width: 768px) {
+      font-size: 114px;
+      line-height: 144px;
+    }
   }
 }
 </style>
