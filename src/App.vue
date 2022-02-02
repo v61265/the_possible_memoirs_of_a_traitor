@@ -98,6 +98,12 @@ export default {
       this.isMobile = window.innerWidth < 768;
     },
     handleHOverStart(boolean) {
+      if (
+        this.introStatus === "content" ||
+        this.aboutStatus === "content" ||
+        this.timeStatus === "content"
+      )
+        return;
       this.isHoverStart = boolean;
     },
     setModal(value) {
