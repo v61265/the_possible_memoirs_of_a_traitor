@@ -29,7 +29,7 @@ export default {
   width: calc(100vw - 40px);
   //   height: calc(100vh - 80px);
   top: 20px;
-  left: 40px;
+  left: 20px;
   position: fixed;
 }
 </style>

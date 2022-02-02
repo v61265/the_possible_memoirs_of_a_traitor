@@ -25,7 +25,7 @@
     <Modal v-show="openModal" @close="setModal(null)">
       <Intro v-show="openModal === 'intro'" />
       <About v-show="openModal === 'about'" />
-      <Time v-show="openModal === 'time'" />
+      <Time v-show="openModal === 'time'" :time="time" />
     </Modal>
     <StartButton
       @mouseover="handleHOverStart(true)"
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import moment from "moment";
 import StartButton from "./components/StartButton.vue";
 import Intro from "./components/Intro.vue";
 import Modal from "./components/Modal.vue";
@@ -52,7 +53,15 @@ export default {
       introStatus: "icon",
       timeStatus: "icon",
       aboutStatus: "icon",
+      duration: 0,
     };
+  },
+  computed: {
+    time() {
+      var date = new Date("2022-02-03 19:00:00");
+      var date_ts = date.getTime() + 1000 * this.duration;
+      return moment(date_ts).format("HH : mm");
+    },
   },
   mounted() {
     const hand = document.getElementsByClassName("hand")[0];
@@ -63,6 +72,9 @@ export default {
       this.isMobile = window.innerWidth <= 768;
       window.addEventListener("resize", this.onResize);
     });
+    setInterval(() => {
+      this.duration++;
+    }, 1000);
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
