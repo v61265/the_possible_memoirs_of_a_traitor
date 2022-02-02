@@ -116,8 +116,7 @@ export default {
     width: 100vw;
     background: url("./assets/background_sm.png");
     background-size: cover;
-    // display: block;
-    // margin: auto;
+    background-position: center;
     @media (min-width: 768px) {
       background: url("./assets/background.png");
       background-size: cover;
