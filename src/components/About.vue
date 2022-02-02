@@ -33,7 +33,7 @@
   color: #fff;
   padding: 28px 10px;
   text-align: center;
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     padding: 50px 70px;
     display: flex;
     text-align: start;
@@ -46,21 +46,21 @@
 
   img {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       display: block;
       max-width: 60%;
     }
   }
 
   &__section {
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       flex: 1;
     }
     &_title {
       font-family: Racing Sans One;
       font-size: 24px;
       line-height: 30px;
-      @media (min-width: 768px) {
+      @media (min-width: 1200px) {
         font-size: 36px;
         line-height: 45px;
       }
@@ -70,7 +70,7 @@
       font-size: 12px;
       line-height: 16px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1200px) {
         margin-top: 16px;
         font-size: 20px;
         line-height: 29px;
