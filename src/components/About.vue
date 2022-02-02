@@ -3,15 +3,15 @@
     <div class="about__section">
       <div class="about__section_title">ABOUT</div>
       <div class="about__section_content">
-        《他們在結婚的前一天爆炸》<br />
+        《叛徒夏油可能的回憶錄》<br />
         文字腳本｜和樹<br />
         ＣＧ繪製｜和樹<br />
         <br /><br />
-
-        共同主題｜結婚<br />
-        活動發起｜PLURK＠teatime725<br />
-        #週日夏五茶 #夏油傑2022生誕祭<br />
-        #夏油溫泉旅館自助餐<br />
+        《2022夏油傑生誕祭：オマエもいる》 共同主題｜同居日常<br />
+        抽籤題目｜請求<br />
+        活動發起｜PLURK＠gsgs20171224<br />
+        #2022夏油傑誕生祭 #オマエもいる<br />
+        #夏五24HR創作活動<br />
       </div>
     </div>
     <div class="about__section">
