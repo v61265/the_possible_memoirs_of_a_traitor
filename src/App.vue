@@ -2,23 +2,19 @@
   <div id="app">
     <div :class="{ blur: isHoverStart }">
       <div class="hand" id="intro" @click="setModal('intro')">
-        <img v-show="introStatus === 'icon'" src="./assets/hand-up.png" /><Intro
-          v-show="introStatus === 'content' && !this.isMobile"
+        <img v-show="introStatus === 'icon'" src="./assets/hand-up.png" />
+        <Intro v-show="introStatus === 'content' && !this.isMobile" />
+      </div>
+      <div class="star" id="about" @click="setModal('about')">
+        <img v-show="aboutStatus === 'icon'" src="./assets/falling-star.png" />
+        <About v-show="aboutStatus === 'content' && !this.isMobile" />
+      </div>
+      <div class="clock" id="time" @click="setModal('time')">
+        <img v-show="timeStatus === 'icon'" src="./assets/clock.png" />
+        <Time
+          v-show="timeStatus === 'content' && !this.isMobile"
+          :time="time"
         />
-      </div>
-      <div
-        class="star"
-        v-show="aboutStatus === 'icon'"
-        @click="setModal('about')"
-      >
-        <img src="./assets/falling-star.png" />
-      </div>
-      <div
-        class="clock"
-        v-show="timeStatus === 'icon'"
-        @click="setModal('time')"
-      >
-        <img src="./assets/clock.png" />
       </div>
       <div class="background" />
     </div>
@@ -54,6 +50,7 @@ export default {
       timeStatus: "icon",
       aboutStatus: "icon",
       duration: 0,
+      introWidth: 0,
     };
   },
   computed: {
@@ -64,13 +61,30 @@ export default {
     },
   },
   mounted() {
-    const hand = document.getElementsByClassName("hand")[0];
-    console.log(hand);
-    hand.addEventListener("animationstart", this.introListener);
-    hand.addEventListener("animationend", this.introListener);
     this.$nextTick(() => {
       this.isMobile = window.innerWidth <= 768;
       window.addEventListener("resize", this.onResize);
+
+      // 設定 hover 動畫顯示與消失
+      const intro = document.getElementById("intro");
+      const about = document.getElementById("about");
+      const time = document.getElementById("time");
+
+      // 動畫開始時什麼都不顯示
+      intro.addEventListener(
+        "transitionstart",
+        () => (this.introStatus = null)
+      );
+      about.addEventListener(
+        "transitionstart",
+        () => (this.aboutStatus = null)
+      );
+      time.addEventListener("transitionstart", () => (this.timeStatus = null));
+
+      // 動畫結束時各自顯示
+      intro.addEventListener("transitionend", this.handleIntroEnd);
+      about.addEventListener("transitionend", this.handleAboutEnd);
+      time.addEventListener("transitionend", this.handleTimeEnd);
     });
     setInterval(() => {
       this.duration++;
@@ -86,12 +100,18 @@ export default {
     handleHOverStart(boolean) {
       this.isHoverStart = boolean;
     },
-    introListener(e) {
-      console.log(e);
-    },
     setModal(value) {
       if (!this.isMobile) return;
       this.openModal = value;
+    },
+    handleIntroEnd(e) {
+      this.introStatus = e.target.clientHeight === 78 ? "icon" : "content";
+    },
+    handleAboutEnd(e) {
+      this.aboutStatus = e.target.clientHeight === 78 ? "icon" : "content";
+    },
+    handleTimeEnd(e) {
+      this.timeStatus = e.target.clientHeight === 78 ? "icon" : "content";
     },
   },
 };
@@ -103,11 +123,11 @@ export default {
   width: 100vw;
   height: 100vh;
   position: relative;
-
+  background: #000;
   .blur {
-    filter: blur(1px);
+    filter: blur(3px);
     * {
-      filter: blur(1px);
+      filter: blur(3px);
     }
   }
 
@@ -138,6 +158,7 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      transition: display 1s ease 0s;
     }
     @media (min-width: 768px) {
       transition: height 1s ease 0s, width 1s ease 0s;
