@@ -62,7 +62,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.isMobile = window.innerWidth <= 1200;
+      this.isMobile = window.innerWidth <= 768;
       window.addEventListener("resize", this.onResize);
 
       // 設定 hover 動畫顯示與消失
@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     onResize() {
-      this.isMobile = window.innerWidth < 1200;
+      this.isMobile = window.innerWidth < 768;
     },
     handleHOverStart(boolean) {
       if (
@@ -157,7 +157,7 @@ export default {
     background: url("./assets/background_sm.png");
     background-size: cover;
     background-position: center;
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       background: url("./assets/background.png");
       background-size: cover;
       background-position: center;
@@ -180,7 +180,7 @@ export default {
       transform: translate(-50%, -50%);
       transition: display 1s ease 0s;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       transition: height 1s ease 0s, width 1s ease 0s;
       top: 24px;
       right: 24px;
@@ -207,7 +207,7 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       transition: height 1s ease 0s, width 1s ease 0s;
       &:hover {
         width: calc(100vw - 160px);
@@ -230,7 +230,7 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       transition: height 1s ease 0s, width 1s ease 0s;
       &:hover {
         width: 50vw;

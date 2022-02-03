@@ -24,7 +24,7 @@ export default {
   line-height: 43px;
   font-family: Racing Sans One;
   text-align: center;
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ export default {
   &__time {
     font-size: 64px;
     line-height: 81px;
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       font-size: 114px;
       line-height: 144px;
     }
