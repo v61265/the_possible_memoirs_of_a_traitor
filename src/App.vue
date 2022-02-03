@@ -209,7 +209,7 @@ export default {
       transition: height 1s ease 0s, width 1s ease 0s;
       &:hover {
         width: calc(100vw - 160px);
-        height: calc(100vh - 160px);
+        height: calc(100vh - 80px);
       }
     }
   }

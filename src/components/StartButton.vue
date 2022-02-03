@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("http://fonts.cdnfonts.com/css/racing-sans-one");
+@import url("https://fonts.cdnfonts.com/css/racing-sans-one");
 
 .start {
   font-family: Racing Sans One;

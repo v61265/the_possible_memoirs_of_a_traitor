@@ -8,7 +8,7 @@
           文字腳本｜和樹<br />
           ＣＧ繪製｜和樹<br />
           <br />
-          《2022夏油傑生誕祭：オマエもいる》》<br />
+          《2022夏油傑生誕祭：オマエもいる》<br />
           共同主題｜同居日常<br />
           抽籤題目｜請求<br />
           活動發起｜PLURK＠gsgs20171224<br />
@@ -48,7 +48,6 @@
     display: none;
     @media (min-width: 1200px) {
       display: block;
-      max-width: 60%;
     }
   }
 
