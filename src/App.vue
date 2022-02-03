@@ -132,8 +132,10 @@ export default {
   background: #000;
   .blur {
     animation: image_blur 5s;
+    animation-fill-mode: forwards;
     * {
       animation: image_blur 5s;
+      animation-fill-mode: forwards;
     }
   }
 
