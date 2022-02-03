@@ -131,9 +131,21 @@ export default {
   position: relative;
   background: #000;
   .blur {
-    filter: blur(3px);
+    animation: image_blur 5s;
     * {
-      filter: blur(3px);
+      animation: image_blur 5s;
+    }
+  }
+
+  @keyframes image_blur {
+    0% {
+      filter: blur(0px);
+    }
+    50% {
+      filter: blur(2px);
+    }
+    100% {
+      filter: blur(4px);
     }
   }
 
