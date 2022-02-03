@@ -71,11 +71,10 @@
       margin-top: 12px;
       font-size: 12px;
       line-height: 16px;
-
       @media (min-width: 768px) {
         margin-top: 16px;
-        font-size: 20px;
-        line-height: 29px;
+        font-size: 16px;
+        line-height: 20px;
       }
     }
   }
