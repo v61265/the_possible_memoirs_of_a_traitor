@@ -27,7 +27,7 @@
     <StartButton
       @mouseover="handleHOverStart(true)"
       @mouseleave="handleHOverStart(false)"
-      @click.native="setModal('start')"
+      @click.native="handleClickButton"
     />
   </div>
 </template>
@@ -121,6 +121,9 @@ export default {
     },
     handleTimeEnd(e) {
       this.timeStatus = e.target.clientHeight === 78 ? "icon" : "content";
+    },
+    handleClickButton() {
+      window.open("https://m.me/103492645590922", "_blank");
     },
   },
 };
