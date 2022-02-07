@@ -123,7 +123,7 @@ export default {
       this.timeStatus = e.target.clientHeight === 78 ? "icon" : "content";
     },
     handleClickButton() {
-      window.open("https://m.me/103492645590922", "_blank");
+      window.open("https://m.me/100844449191258", "_blank");
     },
   },
 };
