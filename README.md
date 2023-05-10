@@ -4,7 +4,7 @@
 
 
 
-![dd](https://imgur.com/5IyxVLk)
+[Imgur](https://imgur.com/5IyxVLk)
 
 ## Project setup
 ```
