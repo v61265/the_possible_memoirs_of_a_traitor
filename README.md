@@ -2,9 +2,7 @@
 
 ## Demo
 
-
-
-[Imgur](https://imgur.com/5IyxVLk)
+![Uploading May-10-2023 15-58-25.gif…]()
 
 ## Project setup
 ```
