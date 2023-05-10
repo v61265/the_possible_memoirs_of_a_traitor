@@ -2,8 +2,8 @@
 
 ## Demo
 
-![](https://imgur.com/a/4pH0xnt)
 
+![](https://imgur.com/5IyxVLk)
 
 ## Project setup
 ```
